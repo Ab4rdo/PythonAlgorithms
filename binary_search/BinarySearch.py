@@ -1,22 +1,20 @@
 
-class BinarySearch:
 
-    def search(self, seq, target):
+def search(seq, target):
         """
-        Implementation of binary search algorithm
+        Implementation of binary_search search algorithm
         seq - a int list
         target - a value to search
-        return - index of target or raise ValueError if target not in the seq
+        return - index of target or raise ValueError if target not in the seq or if seq is empty
         """
 
         if not seq:
-            raise ValueError('List is empty')
+            raise ValueError('List is empty or the target is not in the list')
 
-        guess = int((len(seq)-1)/2)
+        guess = int((len(seq))/2)
         if target == seq[guess]:
             return guess
         if target > seq[guess]:
-            return BinarySearch.search(seq[guess+1:], target)
+            return guess + 1 + search(seq[guess+1:], target)
         if target < seq[guess]:
-            return BinarySearch.search(seq[seq[:guess-1]], target)
-
+            return search(seq[:guess], target)
