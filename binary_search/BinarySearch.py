@@ -19,3 +19,4 @@ class BinarySearch:
             return BinarySearch.search(seq[guess+1:], target)
         if target < seq[guess]:
             return BinarySearch.search(seq[seq[:guess-1]], target)
+    
