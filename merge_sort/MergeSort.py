@@ -9,7 +9,10 @@ def sort(seq):
     if not seq:
         raise ValueError('Empty list')
 
-    m = len(seq)/2
+    if len(seq) <= 1:
+        return seq[:len(seq)]
+
+    m = int(len(seq)/2)
     return merge(sort(seq[:m]), sort(seq[m:]))
 
 
@@ -23,9 +26,10 @@ def merge(seq1, seq2):
     :param seq2: a second integer list
     :return: merged and sorted list made of seq1 and seq2
     """
+
     len1 = len(seq1)
     len2 = len(seq2)
-    result = []
+    result = seq1 + seq2
 
     i = j = k = 0
 
