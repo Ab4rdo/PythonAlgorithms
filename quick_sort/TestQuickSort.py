@@ -8,12 +8,8 @@ class TestQuickSort(unittest.TestCase):
     def test_quick_sort_1(self):
         pass
 
-
-
-
-
-
-
+    def test_quick_sort_with_error(self):
+        pass
 
 
 

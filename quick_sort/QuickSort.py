@@ -10,8 +10,14 @@ def sort(seq):
     pass
 
 
+# Helping methods
 
-def partition():
+def partition(seq):
+    """
+    Implementation of partition function
+    :param seq:
+    :return:
+    """
 
     pass
 
