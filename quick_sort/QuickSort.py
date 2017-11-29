@@ -6,8 +6,9 @@ def sort(seq):
     :param seq: an integer list
     :return: new sorted integer list
     """
+    index = partition(seq)
 
-    pass
+    return sort(partition(seq[:index])) + seq[index] + sort(partition(seq[index+1:]))
 
 
 # Helping methods
@@ -19,5 +20,5 @@ def partition(seq):
     :return:
     """
 
-    pass
+    return 0
 
